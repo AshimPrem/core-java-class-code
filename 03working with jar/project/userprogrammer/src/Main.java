@@ -1,0 +1,6 @@
+public class Main{
+	public static void main ( String [] args ){
+		p1.A a1 = new p1.A();
+		a1.m1();
+	}
+}
