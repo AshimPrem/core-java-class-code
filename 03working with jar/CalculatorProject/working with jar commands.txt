@@ -1,0 +1,238 @@
+
+H:\core-java-class-code\03working with jar\CalculatorProject\developer>prompt :
+
+:tree
+Folder PATH listing for volume Data
+Volume serial number is 4045-E3BA
+H:.
+├───bin
+├───dist
+├───lib
+└───src
+    └───com
+        └───swastik
+            └───ashim
+                └───mlogic
+
+:dir
+ Volume in drive H is Data
+ Volume Serial Number is 4045-E3BA
+
+ Directory of H:\core-java-class-code\03working with jar\CalculatorProject\developer
+
+24-02-2026  12:15    <DIR>          .
+24-02-2026  12:15    <DIR>          ..
+24-02-2026  12:15    <DIR>          bin
+24-02-2026  12:15    <DIR>          dist
+24-02-2026  12:15    <DIR>          lib
+24-02-2026  12:15    <DIR>          src
+               0 File(s)              0 bytes
+               6 Dir(s)  140,815,544,320 bytes free
+
+:cd src
+
+:javac -d ../bin com\swastik\ashim\mlogic\Calculator.java
+
+:cd ..
+
+:cd bin
+
+:javap com\swastik\ashim\mlogic\Calculator.class
+Compiled from "Calculator.java"
+public class com.swastik.ashim.mlogic.Calculator {
+  public com.swastik.ashim.mlogic.Calculator();
+  public static void add(int, int);
+}
+
+:cd ..
+
+:cd dist
+
+:dir
+ Volume in drive H is Data
+ Volume Serial Number is 4045-E3BA
+
+ Directory of H:\core-java-class-code\03working with jar\CalculatorProject\developer\dist
+
+24-02-2026  12:15    <DIR>          .
+24-02-2026  12:15    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  140,815,540,224 bytes free
+
+:jar -cvf calculator-api.jar ../bin .
+added manifest
+adding: bin/(in = 0) (out= 0)(stored 0%)
+adding: bin/com/(in = 0) (out= 0)(stored 0%)
+adding: bin/com/swastik/(in = 0) (out= 0)(stored 0%)
+adding: bin/com/swastik/ashim/(in = 0) (out= 0)(stored 0%)
+adding: bin/com/swastik/ashim/mlogic/(in = 0) (out= 0)(stored 0%)
+adding: bin/com/swastik/ashim/mlogic/Calculator.class(in = 643) (out= 404)(deflated 37%)
+
+:jar -cvf calculator-api.jar -C ../bin .
+added manifest
+adding: com/(in = 0) (out= 0)(stored 0%)
+adding: com/swastik/(in = 0) (out= 0)(stored 0%)
+adding: com/swastik/ashim/(in = 0) (out= 0)(stored 0%)
+adding: com/swastik/ashim/mlogic/(in = 0) (out= 0)(stored 0%)
+adding: com/swastik/ashim/mlogic/Calculator.class(in = 643) (out= 404)(deflated 37%)
+
+:cd ..
+
+:dir
+ Volume in drive H is Data
+ Volume Serial Number is 4045-E3BA
+
+ Directory of H:\core-java-class-code\03working with jar\CalculatorProject\developer
+
+24-02-2026  12:15    <DIR>          .
+24-02-2026  12:25    <DIR>          ..
+24-02-2026  12:21    <DIR>          bin
+24-02-2026  12:24    <DIR>          dist
+24-02-2026  12:15    <DIR>          lib
+24-02-2026  12:15    <DIR>          src
+               0 File(s)              0 bytes
+               6 Dir(s)  140,815,532,032 bytes free
+
+:cd ..
+
+:dir
+ Volume in drive H is Data
+ Volume Serial Number is 4045-E3BA
+
+ Directory of H:\core-java-class-code\03working with jar\CalculatorProject
+
+24-02-2026  12:25    <DIR>          .
+24-02-2026  12:14    <DIR>          ..
+24-02-2026  12:15    <DIR>          developer
+24-02-2026  12:25    <DIR>          userProgrammer
+               0 File(s)              0 bytes
+               4 Dir(s)  140,815,532,032 bytes free
+
+:cd userProgrammer
+
+:dir
+ Volume in drive H is Data
+ Volume Serial Number is 4045-E3BA
+
+ Directory of H:\core-java-class-code\03working with jar\CalculatorProject\userProgrammer
+
+24-02-2026  12:25    <DIR>          .
+24-02-2026  12:25    <DIR>          ..
+24-02-2026  12:25    <DIR>          bin
+24-02-2026  12:25    <DIR>          dist
+24-02-2026  12:26    <DIR>          lib
+24-02-2026  12:26    <DIR>          src
+               0 File(s)              0 bytes
+               6 Dir(s)  140,815,532,032 bytes free
+
+:dir
+ Volume in drive H is Data
+ Volume Serial Number is 4045-E3BA
+
+ Directory of H:\core-java-class-code\03working with jar\CalculatorProject\userProgrammer
+
+24-02-2026  12:25    <DIR>          .
+24-02-2026  12:25    <DIR>          ..
+24-02-2026  12:25    <DIR>          bin
+24-02-2026  12:25    <DIR>          dist
+24-02-2026  12:26    <DIR>          lib
+24-02-2026  12:26    <DIR>          src
+               0 File(s)              0 bytes
+               6 Dir(s)  140,815,532,032 bytes free
+
+:cd src
+
+:javac Main.java
+Main.java:1: error: package com.swastik.ashim.mlogic does not exist
+import com.swastik.ashim.mlogic.Calculator;
+                               ^
+Main.java:5: error: cannot find symbol
+                Calculator.add(10,20);
+                ^
+  symbol:   variable Calculator
+  location: class Main
+2 errors
+
+:set classpath=.;H:\core-java-class-code\03working with jar\CalculatorProject\userProgrammer\lib\calculator-api.jar
+
+:javac Main.java
+
+:java Main
+Addition : 30
+
+:javac -d ../bin Main.java
+
+:cd ..
+
+:cd dist
+
+:dir
+ Volume in drive H is Data
+ Volume Serial Number is 4045-E3BA
+
+ Directory of H:\core-java-class-code\03working with jar\CalculatorProject\userProgrammer\dist
+
+24-02-2026  12:25    <DIR>          .
+24-02-2026  12:25    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  140,815,532,032 bytes free
+
+:jar -cvfe ashim.jar Main -C ../bin .
+added manifest
+adding: Main.class(in = 329) (out= 257)(deflated 21%)
+
+:java -jar ashim.jar
+Exception in thread "main" java.lang.NoClassDefFoundError: com/swastik/ashim/mlogic/Calculator
+        at Main.main(Main.java:5)
+Caused by: java.lang.ClassNotFoundException: com.swastik.ashim.mlogic.Calculator
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+        ... 1 more
+
+:java -jar ashim.jar
+Addition : 30
+
+:H:\core-java-class-code\03working with jar\CalculatorProject\userProgrammer\lib
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
